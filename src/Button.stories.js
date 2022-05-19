@@ -1,9 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { userEvent, within } from '@storybook/testing-library';
-import { Button } from './Button';
-import { Icon } from './Icon';
-import { StoryLinkWrapper } from './StoryLinkWrapper';
+import React from "react";
+import styled from "styled-components";
+
+import { userEvent, within } from "@storybook/testing-library";
+
+import { Button } from "./Button";
+import { Icon } from "./Icon";
+import { StoryLinkWrapper } from "./StoryLinkWrapper";
 
 const CustomButton = styled.button`
   border: 1px solid green;
@@ -14,11 +16,11 @@ const CustomButton = styled.button`
 `;
 
 function ButtonWrapper(props) {
-  return <CustomButton {...props}/>;
+  return <CustomButton {...props} />;
 }
 
 export default {
-  title: 'Design System/Button',
+  title: "Design System/Button",
   component: Button,
 };
 
@@ -75,7 +77,7 @@ export const AllButtons = (args) => (
   </div>
 );
 
-AllButtons.storyName= "all buttons";
+AllButtons.storyName = "all buttons";
 
 export const buttonWrapper = (args) => (
   <div>
@@ -174,23 +176,23 @@ export const AnchorWrapper = (args) => (
     >
       Primary
     </Button>
-    <Button 
-      ButtonWrapper={StoryLinkWrapper} 
-      appearance="secondary" 
+    <Button
+      ButtonWrapper={StoryLinkWrapper}
+      appearance="secondary"
       href="http://storybook.js.org"
     >
       Secondary
     </Button>
-    <Button 
-      ButtonWrapper={StoryLinkWrapper} 
-      appearance="tertiary" 
+    <Button
+      ButtonWrapper={StoryLinkWrapper}
+      appearance="tertiary"
       href="http://storybook.js.org"
     >
       Tertiary
     </Button>
-    <Button 
-      ButtonWrapper={StoryLinkWrapper} 
-      appearance="outline" 
+    <Button
+      ButtonWrapper={StoryLinkWrapper}
+      appearance="outline"
       href="http://storybook.js.org"
     >
       Outline
@@ -329,8 +331,9 @@ export const WithInteractions = () => (
   <Button
     ButtonWrapper={StoryLinkWrapper}
     appearance="primary"
-    href="http://storybook.js.org">
-      Button
+    href="http://storybook.js.org"
+  >
+    Button
   </Button>
 );
 WithInteractions.play = async ({ canvasElement }) => {
